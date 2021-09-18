@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 import "./Profile.style.js";
 
-export default function Profile({ navigation, topLevelNavigation }) {
+export default function Profile({ route, navigation }) {
     return (
         <View>
             <Text>Welcome to the profile page</Text>
-            <Text>topLevelNavigation: {JSON.stringify(topLevelNavigation)}</Text>
+            <Button title="Sign Out" onPress={route.params.signOut} />
         </View>
     );
 }

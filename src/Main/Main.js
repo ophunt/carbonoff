@@ -12,6 +12,10 @@ import "./Main.style.js";
 const Tab = createBottomTabNavigator();
 
 export default function Main({ navigation }) {
+    const signOut = () => {
+        navigation.goBack();
+    };
+
     const getIconFromRoute = ({ route }) => {
         return ({ focused, color, size }) => {
             const iconName = icons[route.name] ? icons[route.name] : "help-box";
@@ -27,7 +31,7 @@ export default function Main({ navigation }) {
                 tabBarIcon: getIconFromRoute({ route }),
             })}
         >
-            <Tab.Screen name="Profile" component={Profile} topLevelNav={navigation} />
+            <Tab.Screen name="Profile" component={Profile} initialParams={{ signOut }} />
             <Tab.Screen name="Footprint" component={Footprint} />
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Tips" component={Tips} />

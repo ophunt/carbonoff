@@ -25,10 +25,6 @@ export default function App() {
                         title: "carbonOff",
                         headerStyle,
                         headerLeft: null,
-                        headerRight: () => (
-                            // TODO: Move logout to the profile page
-                            <Button title="Sign Out" onPress={() => navigation.goBack()} />
-                        ),
                     })}
                 />
             </Stack.Navigator>
