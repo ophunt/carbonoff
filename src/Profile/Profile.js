@@ -26,7 +26,7 @@ export default function Profile({ route, navigation, signOut }) {
             </View>
             {/* Graph of last 30 days */}
             <View style={globalStyles.container}>
-                <StyledText>Carbon Footprint over last 3 days</StyledText>
+                <StyledText>Carbon Footprint over last 30 days</StyledText>
                 <Image style={styles.graph} source={require("../../assets/icon.png")} />
             </View>
             {/* Rankings and associated buttons */}
