@@ -3,7 +3,7 @@ import { View, Text, Image, Alert } from "react-native";
 import { Button, LinearProgress } from "react-native-elements";
 import globalStyles from "../global.style.js";
 import styles from "./Quiz.style.js";
-import data from "./quizData.json";
+import data from "./baselineQuizData.json";
 import colors from "../../colors.json";
 
 function StyledText({ props, children }) {
