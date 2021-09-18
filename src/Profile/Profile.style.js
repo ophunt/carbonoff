@@ -19,4 +19,8 @@ export default StyleSheet.create({
     bigFont: {
         fontSize: 30,
     },
+    button: {
+        margin: 10,
+        backgroundColor: colors.red,
+    },
 });

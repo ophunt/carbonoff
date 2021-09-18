@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Button, Image, Alert } from "react-native";
+import { View, Alert } from "react-native";
+import { Text, Button, Image } from "react-native-elements";
 import globalStyles from "../global.style.js";
 import styles from "./Profile.style.js";
 
@@ -31,30 +32,32 @@ export default function Profile({ route, navigation, signOut }) {
             </View>
             {/* Rankings and associated buttons */}
             <View style={[globalStyles.container, globalStyles.flexRow]}>
-                <View style={globalStyles.container}>
+                <View>
                     <View style={[globalStyles.container, globalStyles.greenBack]}>
                         <Text style={styles.bigFont}>Top 97th</Text>
                         <Text>among people</Text>
                         <Text>in your city</Text>
                     </View>
-                    <View style={[globalStyles.container, globalStyles.greenBack]}>
+                    <View>
                         <Button
                             title={`View${"\n"}Leaderboard`}
+                            buttonStyle={styles.button}
                             onPress={() => {
                                 /* TODO */
                             }}
                         />
                     </View>
                 </View>
-                <View style={globalStyles.container}>
+                <View>
                     <View style={[globalStyles.container, globalStyles.greenBack]}>
                         <Text style={styles.bigFont}>3rd lowest</Text>
                         <Text>among your</Text>
                         <Text>36 friends</Text>
                     </View>
-                    <View style={[globalStyles.container, globalStyles.greenBack]}>
+                    <View>
                         <Button
                             title={`Add/Manage${"\n"}Friends`}
+                            buttonStyle={styles.button}
                             onPress={() => {
                                 /* TODO */
                             }}
@@ -64,6 +67,7 @@ export default function Profile({ route, navigation, signOut }) {
             </View>
             <Button
                 title="Sign Out"
+                buttonStyle={styles.button}
                 onPress={() => {
                     Alert.alert("Sign out", "Are you sure you would like to sign out?", [
                         { text: "Cancel", style: "cancel" },
