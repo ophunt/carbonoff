@@ -6,6 +6,11 @@ import Login from "./src/Login/Login";
 import Main from "./src/Main/Main";
 import Signup from "./src/Signup/Signup";
 import * as colors from "./colors.json";
+import { Provider as PaperProvider } from 'react-native-paper';
+import { AppRegistry } from 'react-native';
+import { name as appName } from './app.json';
+
+
 
 const Stack = createStackNavigator();
 const headerStyle = {
@@ -35,3 +40,5 @@ export default function App() {
         </NavigationContainer>
     );
 }
+
+AppRegistry.registerComponent(appName, () => App);
