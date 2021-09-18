@@ -9,6 +9,7 @@ import Resources from "../Resources/Resources";
 import Tips from "../Tips/Tips";
 import globalStyles from "../global.style.js";
 import styles from "./Main.style.js";
+import colors from "../../colors.json";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,10 @@ export default function Main({ navigation }) {
             screenOptions={({ route }) => ({
                 headerShown: false,
                 tabBarIcon: getIconFromRoute({ route }),
+                tabBarActiveTintColor: colors.red,
+                tabBarStyle: {
+                    backgroundColor: "black",
+                },
             })}
         >
             <Tab.Screen name="Profile">{(props) => <Profile {...props} signOut={signOut} />}</Tab.Screen>

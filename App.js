@@ -8,22 +8,24 @@ import Signup from "./src/Signup/Signup";
 import * as colors from "./colors.json";
 
 const Stack = createStackNavigator();
-const headerStyle = {
-    backgroundColor: colors["light-green"],
-};
 
 export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Login" component={Login} options={{ headerStyle }} />
-                <Stack.Screen name="Sign Up" component={Signup} options={{ headerStyle }} />
+                <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+                <Stack.Screen name="Sign Up" component={Signup} options={{ headerShown: false }} />
                 <Stack.Screen
                     name="Main"
                     component={Main}
                     options={({ navigation }) => ({
                         title: "carbonOff",
-                        headerStyle,
+                        headerStyle: {
+                            backgroundColor: "black",
+                        },
+                        headerTitleStyle: {
+                            color: colors["light-grey"],
+                        },
                         headerLeft: null,
                     })}
                 />

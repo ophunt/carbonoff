@@ -1,15 +1,23 @@
 import { StyleSheet } from "react-native";
-import * as colors from "../colors.json";
+import colors from "../colors.json";
 
 export default StyleSheet.create({
-    container: {
+    growContainer: {
         flex: 1,
         backgroundColor: colors["dark-grey"],
         alignItems: "center",
         justifyContent: "center",
     },
-    profilePic: {
-        width: 100,
-        height: 100,
+    container: {
+        flex: 0,
+        backgroundColor: colors["dark-grey"],
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    flexRow: {
+        flexDirection: "row",
+    },
+    text: {
+        color: colors["light-grey"],
     },
 });
