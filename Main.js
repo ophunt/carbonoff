@@ -13,15 +13,7 @@ const Tab = createBottomTabNavigator();
 export default function Main({ navigation }) {
     const getIconFromRoute = ({ route }) => {
         return ({ focused, color, size }) => {
-            let iconName;
-
-            if (icons[route.name] !== undefined) {
-                iconName = icons[route.name];
-            } else {
-                iconName = "help-box";
-            }
-
-            // You can return any component that you like here!
+            const iconName = icons[route.name] ? icons[route.name] : "help-box";
             return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
         };
     };
