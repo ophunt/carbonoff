@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Alert, Image, KeyboardAvoidingView, SafeAreaView, View } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Input, Button } from 'react-native-elements';
+import { Input, Button, Text } from 'react-native-elements';
 import styles from "./Login.style.js";
 import requests from "../../requests";
+import globalStyle from "../global.style.js";
 
 export default function Login({ navigation }) {
     const [identifier, setIdentifier] = useState("");
@@ -88,7 +89,10 @@ export default function Login({ navigation }) {
                         loading
                     />}
                 </View>
-                {/* <Button type="clear" title="Sign Up" onPress={() => navigation.navigate("Sign Up")} /> */}
+                <View style={globalStyle.flexRow}>
+                    <Text style={{color: "#CECECE", fontSize: 15, marginTop: 9 }}>Don't have an account?</Text>
+                    <Button titleStyle={{fontSize: 15}} type="clear" title="Sign Up" onPress={() => navigation.navigate("Sign Up")} />
+                </View>
             </KeyboardAvoidingView>
         </SafeAreaView>
     );
