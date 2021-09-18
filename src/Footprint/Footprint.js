@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import "./Footprint.css";
+import "./Footprint.style.js";
 
 export default function Footprint({ navigation }) {
     return (

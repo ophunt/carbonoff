@@ -2,9 +2,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import { Text, View, Button } from "react-native";
-import Login from "./Login";
-import Main from "./Main";
-import Signup from "./Signup";
+import Login from "./src/Login/Login";
+import Main from "./src/Main/Main";
+import Signup from "./src/Signup/Signup";
 import * as colors from "./colors.json";
 
 const Stack = createStackNavigator();

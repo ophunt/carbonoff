@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Text, KeyboardAvoidingView } from "react-native";
-import "./Login.css";
+import "./Login.style.js";
 
 export default function Login({ navigation }) {
     const doLogin = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import "./Tips.css";
+import "./Tips.style.js";
 
 export default function Tips({ navigation }) {
     return (

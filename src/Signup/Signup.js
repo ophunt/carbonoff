@@ -1,7 +1,7 @@
 import { CommonActions } from "@react-navigation/routers";
 import React from "react";
 import { KeyboardAvoidingView, Text, Button } from "react-native";
-import "./Signup.css";
+import "./Signup.style.js";
 
 export default function Signup({ navigation }) {
     const goToLogin = () => {

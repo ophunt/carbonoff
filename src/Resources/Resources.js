@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import "./Resources.css";
+import "./Resources.style.js";
 
 export default function Resources({ navigation }) {
     return (
