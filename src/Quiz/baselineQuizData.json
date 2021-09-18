@@ -1,0 +1,266 @@
+{
+    "Get Started!": {
+        "Q1": {
+            "text": "number of people who live in your household",
+            "input": {
+                "type": "slider",
+                "bounds": [1,5,1]
+            }
+        },
+        "Q2": {
+            "text": "approx gross annual household income ($/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [10000,120000,10000]
+            }
+        }
+    },
+    "Travel": {
+        "Q1": {
+            "text": "distance travelled by vehicle per year (diesel) (miles/gallon)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,10000,1000]
+            }
+        },
+        "Q2": {
+            "text": "mileage of vehicle (diesel) (miles/gallon)",
+            "input": {
+                "type": "slider",
+                "bounds": [10,120,10]
+            }
+        },
+        "Q3": {
+            "text": "distance travelled by vehicle per year (gasoline) (miles/gallon)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,10000,1000]
+            }
+        },
+        "Q4": {
+            "text": "mileage of vehicle (gasoline) (miles/gallon)",
+            "input": {
+                "type": "slider",
+                "bounds": [10,120,10]
+            }
+        },
+        "Q5": {
+            "text": "distance travelled by public transport (miles/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,25000,5000]
+            }
+        },
+        "Q6": {
+            "text": "distance travelled by air travel (miles/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,25000,5000]
+            }
+        }
+    },
+    "Home": {
+        "Q1": {
+            "text": "electricity ($/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1500,150]
+            }
+        },
+        "Q2": {
+            "text": "percentage purchased from a clean energy program",
+            "input": {
+                "type": "slider",
+                "bounds": [0,100,1]
+            }
+        },
+        "Q3": {
+            "text": "natural gas ($/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1500,150]
+            }
+        },
+        "Q4": {
+            "text": "other fuels ($/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1500,150]
+            }
+        },
+        "Q5": {
+            "text": "square ft. of living space",
+            "input": {
+                "type": "slider",
+                "bounds": [0,10000,1000]
+            }
+        },
+        "Q6": {
+            "text": "water usage ($/year)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1500,150]
+            }
+        }
+    },
+    "Food": {
+        "Q1": {
+            "text": "beef, pork, lamb, veal (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,5000,500]
+            }
+        },
+        "Q2": {
+            "text": "fish & seafood (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,5000,500]
+            }
+        },
+        "Q3": {
+            "text": "other meat (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,5000,500]
+            }
+        },
+        "Q4": {
+            "text": "poultry & eggs (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,5000,500]
+            }
+        },
+        "Q5": {
+            "text": "grains & baked goods (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,10000,1000]
+            }
+        },
+        "Q6": {
+            "text": "dairy (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,5000,500]
+            }
+        },
+        "Q7": {
+            "text": "fruits & vegetables (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,5000,500]
+            }
+        },
+        "Q8": {
+            "text": "snacks, drinks, etc (daily calories/person)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,10000,1000]
+            }
+        }
+    },
+    "Shopping - Goods": {
+        "Q1": {
+            "text": "furniture & appliances ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q2": {
+            "text": "clothing ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q3": {
+            "text": "entertainment ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q4": {
+            "text": "paper, pffice & reading ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q5": {
+            "text": "personal care & cleaning ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q6": {
+            "text": "auto parts ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q7": {
+            "text": "medical ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        }
+    },
+    "Shopping - Services": {
+        "Q1": {
+            "text": "health care ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q2": {
+            "text": "information & communication ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q3": {
+            "text": "medical ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q4": {
+            "text": "personal business & finance ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q5": {
+            "text": "household maintainance & repair ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q6": {
+            "text": "organizations & charity ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        },
+        "Q7": {
+            "text": "other services ($/month)",
+            "input": {
+                "type": "slider",
+                "bounds": [0,1000,100]
+            }
+        }
+    }
+}
