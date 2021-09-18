@@ -1,6 +1,6 @@
 import { CommonActions } from "@react-navigation/routers";
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { KeyboardAvoidingView, Text, Button } from "react-native";
 
 export default function Signup({ navigation }) {
     const goToLogin = () => {
@@ -8,9 +8,9 @@ export default function Signup({ navigation }) {
     };
 
     return (
-        <View>
+        <KeyboardAvoidingView>
             <Text>Sign Up</Text>
             <Button title="Back to Login" onPress={goToLogin} />
-        </View>
+        </KeyboardAvoidingView>
     );
 }
