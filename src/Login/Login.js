@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Text, KeyboardAvoidingView } from "react-native";
-import "./Login.style.js";
+import globalStyles from "../global.style.js";
+import styles from "./Login.style.js";
 
 export default function Login({ navigation }) {
     const doLogin = () => {
@@ -11,7 +12,7 @@ export default function Login({ navigation }) {
     };
 
     return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView style={globalStyles.container}>
             <Text>Sign in to carbonOff</Text>
 
             <Button title="Log In" onPress={doLogin} />

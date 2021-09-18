@@ -7,11 +7,17 @@ import Home from "../Home/Home";
 import Profile from "../Profile/Profile";
 import Resources from "../Resources/Resources";
 import Tips from "../Tips/Tips";
-import "./Main.style.js";
+import globalStyles from "../global.style.js";
+import styles from "./Main.style.js";
+import colors from "../../colors.json";
 
 const Tab = createBottomTabNavigator();
 
 export default function Main({ navigation }) {
+    const signOut = () => {
+        navigation.goBack();
+    };
+
     const getIconFromRoute = ({ route }) => {
         return ({ focused, color, size }) => {
             const iconName = icons[route.name] ? icons[route.name] : "help-box";
@@ -25,9 +31,13 @@ export default function Main({ navigation }) {
             screenOptions={({ route }) => ({
                 headerShown: false,
                 tabBarIcon: getIconFromRoute({ route }),
+                tabBarActiveTintColor: colors.red,
+                tabBarStyle: {
+                    backgroundColor: "black",
+                },
             })}
         >
-            <Tab.Screen name="Profile" component={Profile} topLevelNav={navigation} />
+            <Tab.Screen name="Profile">{(props) => <Profile {...props} signOut={signOut} />}</Tab.Screen>
             <Tab.Screen name="Footprint" component={Footprint} />
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Tips" component={Tips} />

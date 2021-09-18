@@ -13,27 +13,25 @@ import { name as appName } from './app.json';
 
 
 const Stack = createStackNavigator();
-const headerStyle = {
-    backgroundColor: colors["light-green"],
-};
 
 export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Login" component={Login} options={{ headerStyle }} />
-                <Stack.Screen name="Sign Up" component={Signup} options={{ headerStyle }} />
+                <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+                <Stack.Screen name="Sign Up" component={Signup} options={{ headerShown: false }} />
                 <Stack.Screen
                     name="Main"
                     component={Main}
                     options={({ navigation }) => ({
                         title: "carbonOff",
-                        headerStyle,
+                        headerStyle: {
+                            backgroundColor: "black",
+                        },
+                        headerTitleStyle: {
+                            color: colors["light-grey"],
+                        },
                         headerLeft: null,
-                        headerRight: () => (
-                            // TODO: Move logout to the profile page
-                            <Button title="Sign Out" onPress={() => navigation.goBack()} />
-                        ),
                     })}
                 />
             </Stack.Navigator>
