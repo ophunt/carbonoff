@@ -5,10 +5,11 @@ import { Text, View, Button } from "react-native";
 import Login from "./Login";
 import Main from "./Main";
 import Signup from "./Signup";
+import * as colors from "./colors.json";
 
 const Stack = createStackNavigator();
 const headerStyle = {
-    backgroundColor: "#CCFFBB",
+    backgroundColor: colors["light-green"],
 };
 
 export default function App() {

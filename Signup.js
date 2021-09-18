@@ -14,3 +14,9 @@ export default function Signup({ navigation }) {
         </KeyboardAvoidingView>
     );
 }
+
+/**
+ * Sign up notes:
+ *  - Usernames can only be in [a-zA-Z0-9_] (letters, numbers, underscores)
+ *  - Emails are verified before they are able to sign in
+ */
