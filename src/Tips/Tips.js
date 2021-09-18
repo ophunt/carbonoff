@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
+import "./Tips.css";
 
-export default function Resources({ navigation }) {
+export default function Tips({ navigation }) {
     return (
         <View>
-            <Text>Welcome to the resources page</Text>
+            <Text>Welcome to the tips page</Text>
         </View>
     );
 }
