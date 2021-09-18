@@ -1,8 +1,10 @@
-import React from "react";
-import { View, Text, Button, Image, Alert } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, Alert } from "react-native";
+import { Button, LinearProgress } from "react-native-elements";
 import globalStyles from "../global.style.js";
 import styles from "./Quiz.style.js";
-import date from "./quizData.json";
+import data from "./quizData.json";
+import colors from "../../colors.json";
 
 function StyledText({ props, children }) {
     return (
@@ -13,15 +15,27 @@ function StyledText({ props, children }) {
 }
 
 export default function Quiz({ route, navigation, signOut }) {
+    const [userAnswers, setUserAnswers] = useState({});
+
     return (
         <View style={globalStyles.growContainer}>
-            {/* Question */}
-            <Text>Question</Text>
-            {/* Input */}
+            <View style={globalStyles.growContainer}>
+                {/* Question */}
+                <StyledText>Question</StyledText>
+                {/* Input */}
+                <StyledText>Input</StyledText>
+            </View>
 
-            {/* Nav buttons */}
+            <View style={globalStyles.growContainer}>
+                {/* Nav buttons */}
+                <View style={[globalStyles.container, globalStyles.flexRow]}>
+                    <Button title="Previous" buttonStyle={styles.button} onPress={() => {}} />
+                    <Button title="Next" buttonStyle={styles.button} onPress={() => {}} />
+                </View>
 
-            {/* Progress Bar */}
+                {/* Progress Bar */}
+                <LinearProgress style={{ width: 220 }} color={colors.red} variant="determinate" value={0.5} />
+            </View>
         </View>
     );
 }
