@@ -31,7 +31,7 @@ export default function Main({ navigation }) {
                 tabBarIcon: getIconFromRoute({ route }),
             })}
         >
-            <Tab.Screen name="Profile" component={Profile} initialParams={{ signOut }} />
+            <Tab.Screen name="Profile">{(props) => <Profile {...props} signOut={signOut} />}</Tab.Screen>
             <Tab.Screen name="Footprint" component={Footprint} />
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Tips" component={Tips} />
