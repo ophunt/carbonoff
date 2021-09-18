@@ -24,7 +24,7 @@ export default function App() {
                             backgroundColor: "black",
                         },
                         headerTitleStyle: {
-                            color: colors["light-grey"],
+                            color: colors["light_grey"],
                         },
                         headerLeft: null,
                         gestureEnabled: false,
@@ -40,7 +40,7 @@ export default function App() {
                             backgroundColor: "black",
                         },
                         headerTitleStyle: {
-                            color: colors["light-grey"],
+                            color: colors["light_grey"],
                         },
                         gestureEnabled: false,
                     })}

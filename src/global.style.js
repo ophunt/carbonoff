@@ -4,13 +4,13 @@ import colors from "../colors.json";
 export default StyleSheet.create({
     growContainer: {
         flex: 1,
-        backgroundColor: colors["dark-grey"],
+        backgroundColor: colors["dark_grey"],
         alignItems: "center",
         justifyContent: "center",
     },
     container: {
         flex: 0,
-        backgroundColor: colors["dark-grey"],
+        backgroundColor: colors["dark_grey"],
         alignItems: "center",
         justifyContent: "center",
     },
@@ -18,11 +18,11 @@ export default StyleSheet.create({
         flexDirection: "row",
     },
     lightText: {
-        color: colors["light-grey"],
+        color: colors["light_grey"],
     },
     greenBack: {
         margin: 10,
         padding: 10,
-        backgroundColor: colors["light-green"],
+        backgroundColor: colors["light_green"],
     },
 });
