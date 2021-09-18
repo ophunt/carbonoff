@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import "./Home.css";
 
 export default function Home({ navigation }) {
     return (

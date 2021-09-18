@@ -2,11 +2,12 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { View, Text } from "react-native";
-import Footprint from "./Footprint";
-import Home from "./Home";
-import Profile from "./Profile";
-import Resources from "./Resources";
-import Tips from "./Tips";
+import Footprint from "../Footprint/Footprint";
+import Home from "../Home/Home";
+import Profile from "../Profile/Profile";
+import Resources from "../Resources/Resources";
+import Tips from "../Tips/Tips";
+import "./Main.css"
 
 const Tab = createBottomTabNavigator();
 
