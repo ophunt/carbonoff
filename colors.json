@@ -1,6 +1,6 @@
 {
-    "light-green": "#CCFFBB",
-    "dark-grey": "#333333",
+    "light_green": "#CCFFBB",
+    "dark_grey": "#333333",
     "red": "#FF2C2C",
-    "light-grey": "#DDDDDD"
+    "light_grey": "#DDDDDD"
 }

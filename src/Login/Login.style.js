@@ -1,3 +1,26 @@
 import { StyleSheet } from "react-native";
+import colors from "../../colors.json";
 
-export default StyleSheet.create({});
+
+export default StyleSheet.create({
+	login: {
+		height: "100%",
+		width: "100%",
+		backgroundColor: colors.dark_grey,
+	},
+	logo: {
+		marginTop: 60,
+		marginBottom: 40,
+		height: 150,
+		width: 150
+	},
+	input: {
+		marginRight: 50,
+		padding: 10
+	},
+	loginButton: {
+		margin: 10,
+		marginTop: 20,
+		backgroundColor: colors.red,
+	}
+});
