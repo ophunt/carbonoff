@@ -1,3 +1,4 @@
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { View, Text } from "react-native";
@@ -10,9 +11,30 @@ import Tips from "./Tips";
 const Tab = createBottomTabNavigator();
 
 export default function Main({ navigation }) {
+    const getIconFromRoute = ({ route }) => {
+        return ({ focused, color, size }) => {
+            let iconName;
+
+            if (icons[route.name] !== undefined) {
+                iconName = icons[route.name];
+            } else {
+                iconName = "help-box";
+            }
+
+            // You can return any component that you like here!
+            return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
+        };
+    };
+
     return (
-        <Tab.Navigator screenOptions={{ headerShown: false }}>
-            <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Navigator
+            initialRouteName="Home"
+            screenOptions={({ route }) => ({
+                headerShown: false,
+                tabBarIcon: getIconFromRoute({ route }),
+            })}
+        >
+            <Tab.Screen name="Profile" component={Profile} topLevelNav={navigation} />
             <Tab.Screen name="Footprint" component={Footprint} />
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Tips" component={Tips} />
@@ -20,3 +42,11 @@ export default function Main({ navigation }) {
         </Tab.Navigator>
     );
 }
+
+const icons = {
+    Profile: "account",
+    Footprint: "foot-print",
+    Home: "home",
+    Tips: "lightbulb-on",
+    Resources: "bookshelf",
+};
