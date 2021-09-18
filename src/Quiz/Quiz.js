@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Button, Image, Alert } from "react-native";
 import globalStyles from "../global.style.js";
-import styles from "./Profile.style.js";
+import styles from "./Quiz.style.js";
+import date from "./quizData.json";
 
 function StyledText({ props, children }) {
     return (
@@ -11,7 +12,7 @@ function StyledText({ props, children }) {
     );
 }
 
-export default function Profile({ route, navigation, signOut }) {
+export default function Quiz({ route, navigation, signOut }) {
     return (
         <View style={globalStyles.growContainer}>
             {/* Profile pic and bio info */}

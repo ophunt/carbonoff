@@ -17,7 +17,12 @@ export default StyleSheet.create({
     flexRow: {
         flexDirection: "row",
     },
-    text: {
+    lightText: {
         color: colors["light-grey"],
+    },
+    greenBack: {
+        margin: 10,
+        padding: 10,
+        backgroundColor: colors["light-green"],
     },
 });

@@ -6,11 +6,10 @@ import Login from "./src/Login/Login";
 import Main from "./src/Main/Main";
 import Signup from "./src/Signup/Signup";
 import * as colors from "./colors.json";
-import { Provider as PaperProvider } from 'react-native-paper';
-import { AppRegistry } from 'react-native';
-import { name as appName } from './app.json';
-
-
+import { Provider as PaperProvider } from "react-native-paper";
+import { AppRegistry } from "react-native";
+import { name as appName } from "./app.json";
+import Quiz from "./src/Quiz/Quiz";
 
 const Stack = createStackNavigator();
 
@@ -32,6 +31,22 @@ export default function App() {
                             color: colors["light-grey"],
                         },
                         headerLeft: null,
+                        gestureEnabled: false,
+                    })}
+                />
+                <Stack.Screen
+                    name="Quiz"
+                    component={Quiz}
+                    options={() => ({
+                        title: "Carbon Footprint Quiz",
+                        headerBackTitle: "Back",
+                        headerStyle: {
+                            backgroundColor: "black",
+                        },
+                        headerTitleStyle: {
+                            color: colors["light-grey"],
+                        },
+                        gestureEnabled: false,
                     })}
                 />
             </Stack.Navigator>
