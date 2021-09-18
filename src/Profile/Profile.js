@@ -25,9 +25,43 @@ export default function Profile({ route, navigation, signOut }) {
                 </View>
             </View>
             {/* Graph of last 30 days */}
-            <View style={[globalStyles.container, globalStyles.flexRow]}></View>
+            <View style={globalStyles.container}>
+                <StyledText>Carbon Footprint over last 3 days</StyledText>
+                <Image style={styles.graph} source={require("../../assets/icon.png")} />
+            </View>
             {/* Rankings and associated buttons */}
-            <View style={[globalStyles.container, globalStyles.flexRow]}></View>
+            <View style={[globalStyles.container, globalStyles.flexRow]}>
+                <View style={globalStyles.container}>
+                    <View style={[globalStyles.container, styles.greenBack]}>
+                        <Text style={styles.bigFont}>Top 97th</Text>
+                        <Text>among people</Text>
+                        <Text>in your city</Text>
+                    </View>
+                    <View style={[globalStyles.container, styles.greenBack]}>
+                        <Button
+                            title={`View${"\n"}Leaderboard`}
+                            onPress={() => {
+                                /* TODO */
+                            }}
+                        />
+                    </View>
+                </View>
+                <View style={globalStyles.container}>
+                    <View style={[globalStyles.container, styles.greenBack]}>
+                        <Text style={styles.bigFont}>3rd lowest</Text>
+                        <Text>among your</Text>
+                        <Text>36 friends</Text>
+                    </View>
+                    <View style={[globalStyles.container, styles.greenBack]}>
+                        <Button
+                            title={`Add/Manage${"\n"}Friends`}
+                            onPress={() => {
+                                /* TODO */
+                            }}
+                        />
+                    </View>
+                </View>
+            </View>
             <Button title="Sign Out" onPress={signOut} />
         </View>
     );
