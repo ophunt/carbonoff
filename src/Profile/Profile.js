@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, Image } from "react-native";
+import { View, Text, Button, Image, Alert } from "react-native";
 import globalStyles from "../global.style.js";
 import styles from "./Profile.style.js";
 
@@ -62,7 +62,15 @@ export default function Profile({ route, navigation, signOut }) {
                     </View>
                 </View>
             </View>
-            <Button title="Sign Out" onPress={signOut} />
+            <Button
+                title="Sign Out"
+                onPress={() => {
+                    Alert.alert("Sign out", "Are you sure you would like to sign out?", [
+                        { text: "Cancel", style: "cancel" },
+                        { text: "OK", style: "default", onPress: signOut },
+                    ]);
+                }}
+            />
         </View>
     );
 }
