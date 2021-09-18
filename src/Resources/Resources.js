@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native";
-import "./Resources.style.js";
+import globalStyles from "../global.style.js";
+import styles from "./Resources.style.js";
 
 export default function Resources({ navigation }) {
     return (
-        <View>
+        <View style={globalStyles.container}>
             <Text>Welcome to the resources page</Text>
         </View>
     );

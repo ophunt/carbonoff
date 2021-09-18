@@ -1,7 +1,8 @@
 import { CommonActions } from "@react-navigation/routers";
 import React from "react";
 import { KeyboardAvoidingView, Text, Button } from "react-native";
-import "./Signup.style.js";
+import globalStyles from "../global.style.js";
+import styles from "./Signup.style.js";
 
 export default function Signup({ navigation }) {
     const goToLogin = () => {
@@ -9,7 +10,7 @@ export default function Signup({ navigation }) {
     };
 
     return (
-        <KeyboardAvoidingView>
+        <KeyboardAvoidingView style={globalStyles.container}>
             <Text>Sign Up</Text>
             <Button title="Back to Login" onPress={goToLogin} />
         </KeyboardAvoidingView>

@@ -7,7 +7,8 @@ import Home from "../Home/Home";
 import Profile from "../Profile/Profile";
 import Resources from "../Resources/Resources";
 import Tips from "../Tips/Tips";
-import "./Main.style.js";
+import globalStyles from "../global.style.js";
+import styles from "./Main.style.js";
 
 const Tab = createBottomTabNavigator();
 
