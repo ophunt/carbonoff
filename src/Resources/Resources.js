@@ -5,7 +5,7 @@ import styles from "./Resources.style.js";
 
 export default function Resources({ navigation }) {
     return (
-        <View style={globalStyles.container}>
+        <View style={globalStyles.growContainer}>
             <Text>Welcome to the resources page</Text>
         </View>
     );

@@ -5,7 +5,7 @@ import styles from "./Home.style.js";
 
 export default function Home({ navigation }) {
     return (
-        <View style={globalStyles.container}>
+        <View style={globalStyles.growContainer}>
             <Text>Welcome to the home page</Text>
         </View>
     );

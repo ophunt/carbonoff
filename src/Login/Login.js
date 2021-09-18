@@ -16,6 +16,8 @@ export default function Login({ navigation }) {
             <Text>Sign in to carbonOff</Text>
 
             <Button title="Log In" onPress={doLogin} />
+            <Button title="Log In" onPress={doLogin} />
+            <Button title="Log In" onPress={doLogin} />
             <Button title="Sign Up" onPress={() => navigation.navigate("Sign Up")} />
         </KeyboardAvoidingView>
     );

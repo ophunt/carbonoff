@@ -5,7 +5,7 @@ import styles from "./Footprint.style.js";
 
 export default function Footprint({ navigation }) {
     return (
-        <View style={globalStyles.container}>
+        <View style={globalStyles.growContainer}>
             <Text>Welcome to the footprint page</Text>
         </View>
     );

@@ -5,7 +5,7 @@ import styles from "./Tips.style.js";
 
 export default function Tips({ navigation }) {
     return (
-        <View style={globalStyles.container}>
+        <View style={globalStyles.growContainer}>
             <Text>Welcome to the tips page</Text>
         </View>
     );
