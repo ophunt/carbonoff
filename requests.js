@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "http://ec2-52-15-44-6.us-east-2.compute.amazonaws.com/";
+const BASE_URL = "http://carbonoff.online/";
 
 const login = (identifier, password) => {
 	return axios.post(BASE_URL+"api/user/login/", {

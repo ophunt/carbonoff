@@ -19,12 +19,12 @@ export default function Footprint({ route, navigation }) {
     const hasTakenQuizPage = (
         <React.Fragment>
             {/* Baseline chart */}
-            <View style={[globalStyles.container]}>
+            <View style={[globalStyles.container, ]}>
                 <StyledText>Baseline Footprint</StyledText>
-                <Image style={styles.chart} source={require("../../assets/icon.png")} />
+                <Image style={[styles.chart, {marginTop: 10}]} source={require("../../assets/icon.png")} />
             </View>
             {/* Overall baseline buttons */}
-            <View style={[globalStyles.container, globalStyles.flexRow]}>
+            <View style={[globalStyles.container, globalStyles.flexRow, {marginTop: 15}]}>
                 <View style={globalStyles.container}>
                     <Button
                         title={`Update baseline${"\n"}to 30 day average`}
@@ -45,12 +45,12 @@ export default function Footprint({ route, navigation }) {
                 </View>
             </View>
             {/* Daily graph */}
-            <View style={globalStyles.container}>
+            <View style={[globalStyles.container, {marginTop: 20}]}>
                 <StyledText>Carbon Footprint Today</StyledText>
-                <Image style={styles.chart} source={require("../../assets/icon.png")} />
+                <Image style={[styles.chart, {marginTop: 10}]} source={require("../../assets/icon.png")} />
             </View>
             {/* Overall baseline buttons */}
-            <View style={[globalStyles.container, globalStyles.flexRow]}>
+            <View style={[globalStyles.container, globalStyles.flexRow,{marginTop: 15}]}>
                 <View style={globalStyles.container}>
                     <Button
                         title={`Add new${"\n"}carbon event`}
