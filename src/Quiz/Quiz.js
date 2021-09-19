@@ -43,7 +43,6 @@ export default function Quiz({ route, navigation, signOut }) {
     };
 
     const createInputSwitch = (qNum, input) => {
-        console.log(input);
         switch (input.type) {
             case "slider":
                 setInputEl(
@@ -59,7 +58,6 @@ export default function Quiz({ route, navigation, signOut }) {
                         style={{ width: 300 }}
                     />
                 );
-                console.log(`Input set to ${input.bounds[0]}, ${input.bounds[1]}, ${input.bounds[2]}`);
                 break;
             default:
                 setInputEl(<Text>No input type {input.type} found</Text>);
