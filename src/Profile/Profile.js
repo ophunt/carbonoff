@@ -19,9 +19,9 @@ export default function Profile({ route, navigation, signOut }) {
             <View style={[globalStyles.container, globalStyles.flexRow]}>
                 <Image style={styles.profilePic} source={require("../../assets/icon.png")} />
                 <View style={styles.bioInfo}>
-                    <StyledText>Name: Owen Hunt</StyledText>
-                    <StyledText>Username: ophunt</StyledText>
-                    <StyledText>Email: ohunt2@wisc.edu</StyledText>
+                    <StyledText>Name: John Doe</StyledText>
+                    <StyledText>Username: jdoe23</StyledText>
+                    <StyledText>Email: jdoe23@gmail.com</StyledText>
                     <StyledText>Location: Madison, WI, USA</StyledText>
                 </View>
             </View>
