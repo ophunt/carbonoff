@@ -12,9 +12,9 @@ function StyledText({ props, children }) {
     );
 }
 
-export default function Footprint({ navigation }) {
+export default function Footprint({ route, navigation }) {
     // TODO: actually get this value, probably stored locally
-    const userBaselineResults = null;
+    const userBaselineResults = {};
 
     const hasTakenQuizPage = (
         <React.Fragment>
@@ -39,7 +39,7 @@ export default function Footprint({ navigation }) {
                         title={`Retake Baseline${"\n"}Measurement Quiz`}
                         buttonStyle={styles.button}
                         onPress={() => {
-                            /* TODO */
+                            navigation.navigate("Quiz");
                         }}
                     />
                 </View>
