@@ -37,11 +37,11 @@ export default function Main({ navigation }) {
                 },
             })}
         >
-            <Tab.Screen name="Profile">{(props) => <Profile {...props} signOut={signOut} />}</Tab.Screen>
             <Tab.Screen name="Footprint" component={Footprint} />
             <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Tips" component={Tips} />
-            <Tab.Screen name="Resources" component={Resources} />
+            <Tab.Screen name="Profile">{(props) => <Profile {...props} signOut={signOut} />}</Tab.Screen>
+            {/* <Tab.Screen name="Tips" component={Tips} />
+            <Tab.Screen name="Resources" component={Resources} /> */}
         </Tab.Navigator>
     );
 }

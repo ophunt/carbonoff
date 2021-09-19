@@ -11,10 +11,11 @@ export default StyleSheet.create({
         margin: 10,
     },
     graph: {
-        width: 350,
+        width: 318,
         height: 200,
         marginTop: 10,
         borderWidth: 1,
+        borderRadius: 6
     },
     bigFont: {
         fontSize: 30,

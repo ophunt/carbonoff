@@ -19,14 +19,7 @@ export default function App() {
                     name="Main"
                     component={Main}
                     options={({ navigation }) => ({
-                        title: "carbonOff",
-                        headerStyle: {
-                            backgroundColor: "black",
-                        },
-                        headerTitleStyle: {
-                            color: colors["light_grey"],
-                        },
-                        headerLeft: null,
+                        headerShown: false,
                         gestureEnabled: false,
                     })}
                 />
