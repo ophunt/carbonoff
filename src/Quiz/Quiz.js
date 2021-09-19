@@ -6,9 +6,9 @@ import styles from "./Quiz.style.js";
 import data from "./baselineQuizData.json";
 import colors from "../../colors.json";
 
-function StyledText({ props, children }) {
+function StyledText({ style, props, children }) {
     return (
-        <Text style={globalStyles.lightText} {...props}>
+        <Text style={{ ...globalStyles.lightText, ...style }} {...props}>
             {children}
         </Text>
     );
@@ -37,6 +37,11 @@ export default function Quiz({ route, navigation, signOut }) {
         setCurValue(qData[1].input.bounds[0]);
     }, [qNum]);
 
+    const updateCurrent = (v) => {
+        setCurValue(v);
+        setUserAnswers((prev) => ({ ...prev, [qNum]: v }));
+    };
+
     const createInputSwitch = (qNum, input) => {
         console.log(input);
         switch (input.type) {
@@ -46,7 +51,7 @@ export default function Quiz({ route, navigation, signOut }) {
                         key={qNum}
                         allowTouchTrack
                         value={curValue}
-                        onValueChange={setCurValue}
+                        onValueChange={updateCurrent}
                         minimumValue={input.bounds[0]}
                         maximumValue={input.bounds[1]}
                         step={input.bounds[2]}
@@ -66,13 +71,13 @@ export default function Quiz({ route, navigation, signOut }) {
         <View style={globalStyles.growContainer}>
             <View style={globalStyles.growContainer}>
                 {/* Question */}
-                <StyledText>
+                <StyledText style={{ margin: 20 }}>
                     {section} {qInSec}
                 </StyledText>
-                <StyledText>{qData[1].text}</StyledText>
+                <StyledText style={{ margin: 20 }}>{qData[1].text}</StyledText>
                 {/* Input */}
                 {inputEl}
-                <StyledText>
+                <StyledText style={{ margin: 20 }}>
                     {curValue} {qData[1].units}
                 </StyledText>
             </View>
@@ -103,7 +108,17 @@ export default function Quiz({ route, navigation, signOut }) {
                     style={{ width: 220 }}
                     color={colors.red}
                     variant="determinate"
-                    value={(qNum - 1) / qCount}
+                    value={(qNum - 1) / (qCount - 1)}
+                />
+                {/* Finish button */}
+                <Button
+                    title="Finish"
+                    disabled={qNum !== qCount}
+                    buttonStyle={styles.button}
+                    onPress={() => {
+                        // TODO: send userAnswers to API
+                        navigation.goBack();
+                    }}
                 />
             </View>
         </View>

@@ -22,7 +22,7 @@
             "text": "How many miles do you drive per year?",
             "input": {
                 "type": "slider",
-                "bounds": [0,10000,100]
+                "bounds": [0,50000,100]
             },
             "units": "miles"
         },
