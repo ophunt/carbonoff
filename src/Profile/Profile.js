@@ -20,7 +20,7 @@ export default function Profile({ route, navigation, signOut }) {
             <View style={[globalStyles.container, globalStyles.flexRow]}>
                 <Avatar
                     size="xlarge"
-                    style={{ height: 100, width: 100, marginLeft: -20, marginTop: -10 }}
+                    style={{height: 100, width: 100, marginLeft: -20, marginTop: -10}}
                     avatarStyle={{ borderWidth: 1, borderColor: colors.red }}
                     rounded
                     source={{
