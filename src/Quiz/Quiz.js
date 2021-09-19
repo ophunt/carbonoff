@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Image, Alert } from "react-native";
-import { Button, LinearProgress } from "react-native-elements";
+import { Button, LinearProgress, Slider } from "react-native-elements";
 import globalStyles from "../global.style.js";
 import styles from "./Quiz.style.js";
 import data from "./baselineQuizData.json";
@@ -14,27 +14,97 @@ function StyledText({ props, children }) {
     );
 }
 
+let formattedData = {};
+for (let category of Object.keys(data)) {
+    for (let qNum of Object.keys(data[category])) {
+        formattedData[`${category}_${qNum}`] = data[category][qNum];
+    }
+}
+const qList = Object.entries(formattedData);
+const qCount = qList.length;
+
 export default function Quiz({ route, navigation, signOut }) {
     const [userAnswers, setUserAnswers] = useState({});
+    const [qNum, setQNum] = useState(1);
+    const [curValue, setCurValue] = useState(null);
+    const [inputEl, setInputEl] = useState(null);
+
+    const qData = qList[qNum - 1];
+    const [section, qInSec] = qData[0].split("_");
+
+    useEffect(() => {
+        createInputSwitch(qNum, qData[1].input);
+        setCurValue(qData[1].input.bounds[0]);
+    }, [qNum]);
+
+    const createInputSwitch = (qNum, input) => {
+        console.log(input);
+        switch (input.type) {
+            case "slider":
+                setInputEl(
+                    <Slider
+                        key={qNum}
+                        allowTouchTrack
+                        value={curValue}
+                        onValueChange={setCurValue}
+                        minimumValue={input.bounds[0]}
+                        maximumValue={input.bounds[1]}
+                        step={input.bounds[2]}
+                        minimumTrackTintColor={colors.red}
+                        style={{ width: 300 }}
+                    />
+                );
+                console.log(`Input set to ${input.bounds[0]}, ${input.bounds[1]}, ${input.bounds[2]}`);
+                break;
+            default:
+                setInputEl(<Text>No input type {input.type} found</Text>);
+                break;
+        }
+    };
 
     return (
         <View style={globalStyles.growContainer}>
             <View style={globalStyles.growContainer}>
                 {/* Question */}
-                <StyledText>Question</StyledText>
+                <StyledText>
+                    {section} {qInSec}
+                </StyledText>
+                <StyledText>{qData[1].text}</StyledText>
                 {/* Input */}
-                <StyledText>Input</StyledText>
+                {inputEl}
+                <StyledText>
+                    {curValue} {qData[1].units}
+                </StyledText>
             </View>
 
             <View style={globalStyles.growContainer}>
                 {/* Nav buttons */}
                 <View style={[globalStyles.container, globalStyles.flexRow]}>
-                    <Button title="Previous" buttonStyle={styles.button} onPress={() => {}} />
-                    <Button title="Next" buttonStyle={styles.button} onPress={() => {}} />
+                    <Button
+                        title="Previous"
+                        disabled={qNum === 1}
+                        buttonStyle={styles.button}
+                        onPress={() => {
+                            setQNum((prev) => Math.max(prev - 1, 0));
+                        }}
+                    />
+                    <Button
+                        title="Next"
+                        disabled={qNum === qCount}
+                        buttonStyle={styles.button}
+                        onPress={() => {
+                            setQNum((prev) => Math.min(prev + 1, qCount));
+                        }}
+                    />
                 </View>
 
                 {/* Progress Bar */}
-                <LinearProgress style={{ width: 220 }} color={colors.red} variant="determinate" value={0.5} />
+                <LinearProgress
+                    style={{ width: 220 }}
+                    color={colors.red}
+                    variant="determinate"
+                    value={(qNum - 1) / qCount}
+                />
             </View>
         </View>
     );

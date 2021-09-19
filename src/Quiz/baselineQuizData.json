@@ -1,266 +1,270 @@
 {
     "Get Started!": {
         "Q1": {
-            "text": "number of people who live in your household",
+            "text": "How many people who live in your household?",
             "input": {
                 "type": "slider",
                 "bounds": [1,5,1]
-            }
+            },
+            "units": "people"
         },
         "Q2": {
-            "text": "approx gross annual household income ($/year)",
+            "text": "What is your approximate gross annual household income?",
             "input": {
                 "type": "slider",
-                "bounds": [10000,120000,10000]
-            }
+                "bounds": [10000,120000,1000]
+            },
+            "units": "$/year"
         }
     },
     "Travel": {
         "Q1": {
-            "text": "distance travelled by vehicle per year (diesel) (miles/gallon)",
+            "text": "How many miles do you drive per year?",
             "input": {
                 "type": "slider",
-                "bounds": [0,10000,1000]
-            }
+                "bounds": [0,10000,100]
+            },
+            "units": "miles"
         },
         "Q2": {
-            "text": "mileage of vehicle (diesel) (miles/gallon)",
+            "text": "What is the mileage of the vehicle you drive?",
             "input": {
                 "type": "slider",
-                "bounds": [10,120,10]
-            }
-        },
-        "Q3": {
-            "text": "distance travelled by vehicle per year (gasoline) (miles/gallon)",
-            "input": {
-                "type": "slider",
-                "bounds": [0,10000,1000]
-            }
-        },
-        "Q4": {
-            "text": "mileage of vehicle (gasoline) (miles/gallon)",
-            "input": {
-                "type": "slider",
-                "bounds": [10,120,10]
-            }
-        },
-        "Q5": {
-            "text": "distance travelled by public transport (miles/year)",
-            "input": {
-                "type": "slider",
-                "bounds": [0,25000,5000]
-            }
-        },
-        "Q6": {
-            "text": "distance travelled by air travel (miles/year)",
-            "input": {
-                "type": "slider",
-                "bounds": [0,25000,5000]
-            }
+                "bounds": [10,120,1]
+            },
+            "units": "miles/gallon"
         }
     },
     "Home": {
         "Q1": {
-            "text": "electricity ($/year)",
+            "text": "How much do you spend on electricity?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1500,150]
-            }
+                "bounds": [0,1500,10]
+            },
+            "units": "$/year"
         },
         "Q2": {
-            "text": "percentage purchased from a clean energy program",
+            "text": "What percentage of energy do you purchase from a clean energy program?",
             "input": {
                 "type": "slider",
                 "bounds": [0,100,1]
-            }
+            },
+            "units": "percent"
         },
         "Q3": {
-            "text": "natural gas ($/year)",
+            "text": "How much do you spend on natural gas?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1500,150]
-            }
+                "bounds": [0,1500,10]
+            },
+            "units": "$/year"
         },
         "Q4": {
-            "text": "other fuels ($/year)",
+            "text": "How much do you spend on other fuels?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1500,150]
-            }
+                "bounds": [0,1500,10]
+            },
+            "units": "$/year"
         },
         "Q5": {
-            "text": "square ft. of living space",
+            "text": "How many square feet of living space do you inhabit?",
             "input": {
                 "type": "slider",
-                "bounds": [0,10000,1000]
-            }
+                "bounds": [0,10000,20]
+            },
+            "units": "sq. ft."
         },
         "Q6": {
-            "text": "water usage ($/year)",
+            "text": "How much do you spend on water?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1500,150]
-            }
+                "bounds": [0,1500,10]
+            },
+            "units": "$/year"
         }
     },
     "Food": {
         "Q1": {
-            "text": "beef, pork, lamb, veal (daily calories/person)",
+            "text": "How many calories do you consume of beef, pork, lamb, and veal?",
             "input": {
                 "type": "slider",
-                "bounds": [0,5000,500]
-            }
+                "bounds": [0,5000,10]
+            },
+            "units": "daily calories"
         },
         "Q2": {
-            "text": "fish & seafood (daily calories/person)",
+            "text": "How many calories do you consume of fish & seafood?",
             "input": {
                 "type": "slider",
-                "bounds": [0,5000,500]
-            }
+                "bounds": [0,5000,10]
+            },
+            "units": "daily calories"
         },
         "Q3": {
-            "text": "other meat (daily calories/person)",
+            "text": "How many calories do you consume of other meat?",
             "input": {
                 "type": "slider",
-                "bounds": [0,5000,500]
-            }
+                "bounds": [0,5000,10]
+            },
+            "units": "daily calories"
         },
         "Q4": {
-            "text": "poultry & eggs (daily calories/person)",
+            "text": "How many calories do you consume of poultry & eggs?",
             "input": {
                 "type": "slider",
-                "bounds": [0,5000,500]
-            }
+                "bounds": [0,5000,10]
+            },
+            "units": "daily calories"
         },
         "Q5": {
-            "text": "grains & baked goods (daily calories/person)",
+            "text": "How many calories do you consume of grains & baked goods?",
             "input": {
                 "type": "slider",
-                "bounds": [0,10000,1000]
-            }
+                "bounds": [0,10000,10]
+            },
+            "units": "daily calories"
         },
         "Q6": {
-            "text": "dairy (daily calories/person)",
+            "text": "How many calories do you consume of dairy?",
             "input": {
                 "type": "slider",
-                "bounds": [0,5000,500]
-            }
+                "bounds": [0,5000,10]
+            },
+            "units": "daily calories"
         },
         "Q7": {
-            "text": "fruits & vegetables (daily calories/person)",
+            "text": "How many calories do you consume of fruits & vegetables?",
             "input": {
                 "type": "slider",
-                "bounds": [0,5000,500]
-            }
+                "bounds": [0,5000,10]
+            },
+            "units": "daily calories"
         },
         "Q8": {
-            "text": "snacks, drinks, etc (daily calories/person)",
+            "text": "How many calories do you consume of snacks, drinks, etc.?",
             "input": {
                 "type": "slider",
-                "bounds": [0,10000,1000]
-            }
+                "bounds": [0,10000,10]
+            },
+            "units": "daily calories"
         }
     },
     "Shopping - Goods": {
         "Q1": {
-            "text": "furniture & appliances ($/month)",
+            "text": "How much do you spend on furniture & appliances per month?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q2": {
-            "text": "clothing ($/month)",
+            "text": "How much do you spend on clothing per month?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q3": {
-            "text": "entertainment ($/month)",
+            "text": "How much do you spend on entertainment per month?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q4": {
-            "text": "paper, pffice & reading ($/month)",
+            "text": "How much do you spend paper, office & reading?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q5": {
-            "text": "personal care & cleaning ($/month)",
+            "text": "How much do you spend on personal care & cleaning?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q6": {
-            "text": "auto parts ($/month)",
+            "text": "How much do you spend on auto parts?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q7": {
-            "text": "medical ($/month)",
+            "text": "How much do you spend on medical?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         }
     },
     "Shopping - Services": {
         "Q1": {
-            "text": "health care ($/month)",
+            "text": "How much do you spend on health care services?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q2": {
-            "text": "information & communication ($/month)",
+            "text": "How much do you spend on information & communication services?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q3": {
-            "text": "medical ($/month)",
+            "text": "How much do you spend on medical services?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q4": {
-            "text": "personal business & finance ($/month)",
+            "text": "How much do you spend on personal business & finance services?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q5": {
-            "text": "household maintainance & repair ($/month)",
+            "text": "How much do you spend on household maintainance & repair services?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q6": {
-            "text": "organizations & charity ($/month)",
+            "text": "How much do you spend on organizational & charity?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         },
         "Q7": {
-            "text": "other services ($/month)",
+            "text": "How much do you spend on other services?",
             "input": {
                 "type": "slider",
-                "bounds": [0,1000,100]
-            }
+                "bounds": [0,1000,10]
+            },
+            "units": "$/month"
         }
     }
 }
