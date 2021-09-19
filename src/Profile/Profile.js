@@ -21,7 +21,7 @@ export default function Profile({ route, navigation, signOut }) {
                 <Avatar
                     size="xlarge"
                     style={{height: 100, width: 100, marginLeft: -20, marginTop: -10}}
-                    avatarStyle={{ borderWidth: 1, borderColor: colors.red, borderStyle:'solid' }}
+                    avatarStyle={{ borderWidth: 1, borderColor: colors.red }}
                     rounded
                     source={{
                         uri:
